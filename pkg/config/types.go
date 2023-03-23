@@ -11,6 +11,8 @@ type Config struct {
 // GlobalConfig is the global configuration section
 type GlobalConfig struct {
 	AuthN             string `toml:"authn"`
+	BasicAuthUser     string `toml:"basic_auth_user"`
+	BasicAuthPass     string `toml:"basic_auth_pass"`
 	DatabaseURI       string `toml:"db"`
 	ListenAddr        string `toml:"listen_addr"`
 	MetricsListenAddr string `toml:"metrics_listen_addr"`

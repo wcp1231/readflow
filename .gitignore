@@ -4,6 +4,7 @@ node_modules/
 ui/build/
 hosting/
 backup/
+.idea
 .env
 .vscode
 .cache

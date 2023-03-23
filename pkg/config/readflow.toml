@@ -29,6 +29,9 @@ metrics_listen_addr = "${READFLOW_LISTEN_METRICS}"
 # Default: "https://login.nunux.org/auth/realms/readflow"
 authn = "${READFLOW_AUTHN}"
 
+basic_auth_user = "${BASIC_AUTH_USER}"
+basic_auth_pass = "${BASIC_AUTH_PASS}"
+
 ## Public URL
 # Default: "https://api.readflow.app"
 public_url = "${READFLOW_PUBLIC_URL}"

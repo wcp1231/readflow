@@ -12,11 +12,13 @@ import (
 func NewConfig() *Config {
 	c := &Config{
 		Global: GlobalConfig{
-			AuthN:       "https://login.nunux.org/auth/realms/readflow",
-			DatabaseURI: "postgres://postgres:testpwd@localhost/readflow_test?sslmode=disable",
-			ListenAddr:  ":8080",
-			PublicURL:   "https://api.readflow.app",
-			SecretSalt:  "pepper",
+			AuthN:         "basic",
+			BasicAuthUser: "test",
+			BasicAuthPass: "test",
+			DatabaseURI:   "postgres://postgres:testpwd@localhost/readflow_test?sslmode=disable",
+			ListenAddr:    ":8080",
+			PublicURL:     "https://api.readflow.app",
+			SecretSalt:    "pepper",
 		},
 		Integration: IntegrationConfig{
 			AvatarProvider: "https://robohash.org/{seed}?set=set4&size=48x48",
