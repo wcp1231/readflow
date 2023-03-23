@@ -101,9 +101,12 @@ func main() {
 	// Start job scheduler
 	scheduler := job.StartNewScheduler(database)
 
+	routers := api.NewRouter(conf)
+	routers.Handle("/", http.FileServer(http.Dir("/usr/share/html")))
+
 	server := &http.Server{
 		Addr:    conf.Global.ListenAddr,
-		Handler: api.NewRouter(conf),
+		Handler: routers,
 	}
 
 	var metricsServer *http.Server

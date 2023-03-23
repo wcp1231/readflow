@@ -42,7 +42,7 @@ func NewRouter(conf *config.Config) *http.ServeMux {
 		for _, mw := range commonMiddlewares {
 			handler = mw(handler)
 		}
-		router.Handle(route.Path, handler)
+		router.Handle("/api"+route.Path, handler)
 	}
 
 	return router
